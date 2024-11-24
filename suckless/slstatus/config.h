@@ -80,13 +80,13 @@ static const char mic[] = "muted=`wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk 
 
 static const struct arg args[] = {
 	/* function format          argument */
-	{ cpu_perc,             "  %s%% ",      NULL },
-	{ ram_used,             " %s",         NULL },
+	{ cpu_perc,             "  %s%% | ",     NULL },
+	{ ram_used,             " %s",         NULL },
+	{ ram_perc,             "(%s%%) | ",      NULL },
 //	{ ram_total,            "/%s",          NULL },
-	{ ram_perc,             "(%s%%) ",      NULL },
 //	{ run_command,          " %s%% ",      "xbacklight -get" },
-	{ battery_perc,         " %s%%",       "BAT0" },
-	{ battery_state,        "(%s) ",        "BAT0" },
+	{ battery_perc,         " %s%% ",       "BAT0" },
+	{ battery_state,        "(%s) | ",        "BAT0" },
 //	{ run_command,          " %s ",        vol },
 //	{ run_command,          " %s ",        mic },
 //	{ keymap,               " %s ",        NULL },
