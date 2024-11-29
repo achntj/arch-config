@@ -3,6 +3,7 @@ picom -f &
 ~/.fehbg &
 slstatus &
 
+# loop to restart dwm on quit
 while true; do
     dwm >/dev/null 2>&1
 done
