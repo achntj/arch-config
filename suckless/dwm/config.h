@@ -3,7 +3,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 15;        /* gaps between windows */
+static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
@@ -11,6 +11,7 @@ static const char *fonts[]          = { "FiraCode Nerd Font Mono:size=12" };
 static const char dmenufont[]       = "FiraCode Nerd Font Mono:size=12";
 // background color
 static const char col_gray1[]       = "#000000";
+static const char col_zinc[]        = "#27272a";
 // inactive window border color
 static const char col_gray2[]       = "#000000";
 // font color
@@ -22,7 +23,7 @@ static const char col_cyan[]        = "#4c566a";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_gray4, col_zinc,  col_cyan  },
 };
 
 /* tagging */
@@ -46,9 +47,6 @@ static const int attachbelow = 1;    /* 1 means attach after the currently activ
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };
 static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
-static const char *upvol[]      = { "/usr/bin/wpctl",   "set-volume", "@DEFAULT_AUDIO_SINK@",      "5%+",      NULL };
-static const char *downvol[]    = { "/usr/bin/wpctl",   "set-volume", "@DEFAULT_AUDIO_SINK@",      "5%-",      NULL };
-static const char *mutevol[]    = { "/usr/bin/wpctl",   "set-mute",   "@DEFAULT_AUDIO_SINK@",      "toggle",   NULL };
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -58,7 +56,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod4Mask // windows key
+#define MODKEY Mod1Mask // alt key and not windows key
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -112,9 +110,6 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
     { 0, XF86XK_MonBrightnessUp,  spawn,          {.v = brupcmd} },
     { 0, XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd} },
-    { MODKEY,                       XK_F1,  spawn, {.v = mutevol } },
-    { MODKEY,                       XK_F2, spawn, {.v = downvol } },
-	{ MODKEY,                       XK_F3, spawn, {.v = upvol   } },
 };
 
 /* button definitions */
