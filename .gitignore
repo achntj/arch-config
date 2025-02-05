@@ -4,3 +4,4 @@ zsh/.zcompcache/
 plugins/
 zsh/.zcompdump
 BraveSoftware/*
+go/*
