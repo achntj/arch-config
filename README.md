@@ -1,4 +1,4 @@
-# Readme in progress
+# Setup after a fresh install (in-progress)
 
 # After install and mount
 
@@ -6,7 +6,7 @@
 sudo pacman -S xorg xorg-xinit xclip xbindkeys dolphin clang cmake make gcc konsole zsh ttf-firacode-nerd, ttf-dejavu, ttf-font-awesome noto-fonts, noto-fonts-emoji pulseaudio pulseaudio-alsa alsa-utils
 ```
 
-- If os-prober will fail to detect windows
+- If os-prober fails to detect windows
 
 ```
 sudo pacman -Syu fuse3
@@ -16,11 +16,13 @@ sudo pacman -Syu fuse3
 
 ## Set symlinks and time date
 
-- Create symlinks
+- Create symlinks (TODO: Switch to gnu stow)
+
 ```
 ln -sf ~/.config/.xinitrc ~/.xinitc
 ln -s ~/.config/zsh/.zshrc ~/.zshrc
 ln -s ~/.config/zsh/.zprofile ~/.zprofile
+ln -s ~/.config/.xbindkeysrc ~/.xbindkeysrc
 ```
 
 - Set NTP
@@ -35,7 +37,7 @@ sudo timedatectl set-ntp true
 sudo pacman -Syu neovim feh picom
 ```
 
-` Run sudo make clean install in dwm, menu, st, slstatus
+- Run sudo make clean install in dwm, menu, st, slstatus
 
 ## Change Shell
 ```
@@ -50,12 +52,6 @@ chsh -s $(which zsh)
 systemctl --user enable pulseaudio
 # pulseaudio start
 alsamixer
-```
-
-- Bind all keys
-
-```
-xbindkeysrc
 ```
 
 ## Setup Nvim
