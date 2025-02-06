@@ -6,6 +6,7 @@ xrandr --output DP-1 --mode 1920x1080 --right-of eDP-1 --primary
 picom -f &
 ~/.fehbg &
 slstatus &
+xbindkeys
 
 # loop to restart dwm on quit
 while true; do

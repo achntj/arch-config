@@ -67,19 +67,27 @@
 
 # Increase volume
 "pactl set-sink-volume 1 +1000"
-   XF86AudioRaiseVolume
+  XF86AudioRaiseVolume
 
 # Decrease volume
 "pactl set-sink-volume 1 -1000"
-   XF86AudioLowerVolume
+  XF86AudioLowerVolume
 
 # Mute volume
 "pactl set-sink-mute 1 toggle"
-   XF86AudioMute
+  XF86AudioMute
 
 # Mute microphone
 "pactl set-source-mute 0 toggle"
-   XF86AudioMicMute
+  XF86AudioMicMute
+
+# Increase Brightness
+"brightnessctl set 10%+"
+  XF86MonBrightnessUp
+
+# Decrease Brightness
+"brightnessctl set 10%-"
+  XF86MonBrightnessDown
 
 ##################################
 # End of xbindkeys configuration #
