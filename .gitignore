@@ -5,3 +5,5 @@ plugins/
 zsh/.zcompdump
 BraveSoftware/*
 go/*
+pulse/*
+systemd/*
