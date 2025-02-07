@@ -23,6 +23,7 @@ ln -sf ~/.config/.xinitrc ~/.xinitc
 ln -s ~/.config/zsh/.zshrc ~/.zshrc
 ln -s ~/.config/zsh/.zprofile ~/.zprofile
 ln -s ~/.config/.xbindkeysrc ~/.xbindkeysrc
+ln -s ~/.config/.fehbg ~/.fehbh
 ```
 
 - Set NTP
