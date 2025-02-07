@@ -1,4 +1,6 @@
 #!/bin/sh
 
 autoload -U colors && colors
-PROMPT="%B%{$fg[blue]%}{%{$fg[white]%}%n%{$fg[blue]%}} %(?:%{$fg_bold[green]%}$ :%{$fg_bold[red]%}$ )%{$fg[magenta]%}%~%{$reset_color%} "
+# PROMPT="%B%{$fg[blue]%}{%{$fg[white]%}%n%{$fg[blue]%}} %(?:%{$fg_bold[green]%}$ :%{$fg_bold[red]%}$ )%{$fg[magenta]%}%~%{$reset_color%} "
+PROMPT="%B%{$fg[blue]%}{%{$fg[cyan]%}%n%{$fg[yellow]%}@%{$fg[white]%}%m%{$fg[blue]%}} %(?:%{$fg_bold[green]%}$ :%{$fg_bold[red]%}$ )%{$fg[magenta]%}%~%{$reset_color%} "
+
