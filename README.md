@@ -23,7 +23,6 @@ ln -sf ~/.config/.xinitrc ~/.xinitc
 ln -s ~/.config/zsh/.zshrc ~/.zshrc
 ln -s ~/.config/zsh/.zprofile ~/.zprofile
 ln -s ~/.config/.xbindkeysrc ~/.xbindkeysrc
-ln -s ~/.config/.fehbg ~/.fehbg
 ```
 
 - Set NTP
@@ -46,6 +45,11 @@ chsh -s $(which zsh)
 ```
 
 -Restart
+
+- Change bg
+```
+feh --bg-fill '/home/achntj/.config/wps/wp-new.png'
+```
 
 - Setup Audio
 
