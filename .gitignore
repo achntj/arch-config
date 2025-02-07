@@ -7,3 +7,5 @@ BraveSoftware/*
 go/*
 pulse/*
 systemd/*
+dconf/*
+mimeapps.list
