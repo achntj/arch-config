@@ -13,5 +13,11 @@ while true; do
     dwm >/dev/null 2>&1
 done
 
+# trackpad speed
+xinput --set-prop 12 "libinput Accel Speed" 0.6
+
+# Scrolling Direction
+xinput --set-prop 12 "libinput Natural Scrolling Enabled" 1
+
 exec dwm
 
