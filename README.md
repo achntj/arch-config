@@ -19,10 +19,19 @@ sudo pacman -Syu fuse3
 - Create symlinks (TODO: Switch to gnu stow)
 
 ```
-ln -sf ~/.config/.xinitrc ~/.xinitc
-ln -s ~/.config/zsh/.zshrc ~/.zshrc
-ln -s ~/.config/zsh/.zprofile ~/.zprofile
-ln -s ~/.config/.xbindkeysrc ~/.xbindkeysrc
+# Symlinks
+ln -sf "$HOME/.config/.xinitrc" "$HOME/.xinitrc"
+ln -sf "$HOME/.config/zsh/.zshrc" "$HOME/.zshrc"
+ln -sf "$HOME/.config/zsh/.zprofile" "$HOME/.zprofile"
+ln -sf "$HOME/.config/.xbindkeysrc" "$HOME/.xbindkeysrc"
+
+# Xorg touchpad config
+sudo mkdir -p /etc/X11/xorg.conf.d
+sudo ln -sf "$HOME/.config/xorg/90-touchpad-accel.conf" \
+  /etc/X11/xorg.conf.d/90-touchpad-accel.conf
+sudo ln -sf "$HOME/.config/xorg/30-touchpad-natural-scrolling.conf" \
+  /etc/X11/xorg.conf.d/30-touchpad-natural-scrolling.conf
+
 ```
 
 - Set NTP

@@ -65,20 +65,20 @@
 #"rxvt"
 #  Control + b:2 + Release
 
-# Increase volume
-"pactl set-sink-volume 1 +1000"
+# Increase volume (default output)
+"wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
   XF86AudioRaiseVolume
 
-# Decrease volume
-"pactl set-sink-volume 1 -1000"
+# Decrease volume (default output)
+"wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
   XF86AudioLowerVolume
 
-# Mute volume
-"pactl set-sink-mute 1 toggle"
+# Mute volume (default output)
+"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
   XF86AudioMute
 
-# Mute microphone
-"pactl set-source-mute 0 toggle"
+# Mute microphone (default input)
+"wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
   XF86AudioMicMute
 
 # Increase Brightness
