@@ -9,7 +9,7 @@ sudo pacman -S xorg xorg-xinit xclip xbindkeys dolphin clang cmake make gcc kons
 - If os-prober fails to detect windows
 
 ```
-sudo pacman -Syu fuse3
+sudo pacman -S fuse3
 ```
 
 - Clone this Repo (/arch-config)
@@ -43,7 +43,7 @@ sudo timedatectl set-ntp true
 - Some more packages
 
 ```
-sudo pacman -Syu neovim feh picom openssh
+sudo pacman -S neovim feh picom openssh
 ```
 
 - Run sudo make clean install in dwm, menu, st, slstatus
